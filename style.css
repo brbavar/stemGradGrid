@@ -1,0 +1,198 @@
+.filter {
+    color: black;
+    background-color: #fff;
+    font-size: 12pt;
+    text-align: center;
+    display: none;
+    padding: 10px;
+    width: 200px;
+}
+
+#filter1 {
+    position: relative;
+    top: -20px;
+}
+
+.filter:hover {
+    border: 2px solid #006298;
+}
+
+.filter::after {
+    content: "✕";
+}
+
+.filter:hover::after {
+    color: #006298;
+}
+
+#clear:hover {
+    background-color: #006298;
+}
+
+#clear::after {
+    content: "";
+}
+
+.textDiv {
+    transform: translateX(50px);
+}
+
+.picDiv {
+    width: auto;
+    position: relative;
+}
+
+.pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#whole {
+    border-radius: 50px;
+    background-color: black;
+    white-space: nowrap;
+    position: relative;
+}
+
+@media only screen and (max-width: 679px) {
+  #whole {
+    width: 94vw;
+    height: auto;
+    display: ;
+  }
+  
+  #whole div {
+      display: ;
+  }
+  
+  .card {
+      padding-top: 20vw;
+      padding-bottom: 20vw;
+      transform: translateY(-11vw);
+  }
+  
+  .inCard {
+      width: 85%;
+  }
+  
+  .pic {
+      width: 25.06666667vw;
+      height: auto;
+      float: left;
+  }
+  
+  .picDiv {
+      padding-left: 6vw;
+  }
+  
+  .textDiv {
+      float: right;
+      width: 40vw;
+      padding-right: 6vw;
+  }
+  
+  .inner {
+      font-size: 2vw;
+  }
+  
+  .largeFont {
+      font-size: 2.8vw;
+  }
+
+  #michele .inner, #conor .inner, #joel .inner, #humberto .inner,
+  #alexandra .inner, #abigail .inner {
+      transform: translateY(2.75vw);
+  }
+  
+  #hannah .inner {
+      transform: translateY(1.5vw);
+  }
+  
+  #ashley .inner, #denisse .inner {
+      transform: translateY(-2.5vw);
+  }
+}
+
+@media only screen (min-width: 679px) and (max-width: 680px) {
+    #whole {
+        display: none;
+    }
+    
+    #whole div {
+        display: none;
+    }
+    
+    #whole::after {
+        content: 'Increase or decrease size of browser window to continue viewing alumni.';  
+    }
+}
+
+@media only screen and (min-width: 680px) {
+    #whole {
+        padding: 15px;
+        display: ;
+    }
+    
+    #whole div {
+        display: ;
+    }
+
+    .card {
+        padding: 50px;
+    }
+    
+    .inCard {
+        width: 50%;
+        margin-left: 20px;
+        margin-right: auto; 
+    }
+    
+    .pic {
+        float: left; 
+    }
+  
+    #ashleyPic {
+        top: 13px;
+        position: relative;
+    }
+    
+    #denissePic {
+        top: 15px;
+        position: relative;
+    }
+    
+    #hannah .inner {
+        top: -4px;
+    }
+    
+    #humberto .inner {
+        top: 10px;
+    }
+    
+    #conor .inner, #michele .inner, #abigail .inner, 
+    #alexandra .inner, #joel .inner {
+        top: 5px;
+    }
+    
+    #conor .inner, #michele .inner, #abigail .inner, 
+    #alexandra .inner, #joel .inner, #humberto .inner,
+    #hannah .inner {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    .largeFont {
+        font-size: 16pt;
+    }
+}
+
+@media only screen and (min-width: 1084px) {
+  #whole {
+    width: 975px;
+  }
+}
+
+.card {
+    font-size: 12pt;
+}
