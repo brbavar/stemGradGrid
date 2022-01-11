@@ -100,16 +100,16 @@
       font-size: 2.8vw;
   }
 
-  #michele .inner, #conor .inner, #joel .inner, #humberto .inner,
-  #alexandra .inner, #abigail .inner {
+  #jessica .inner, #george .inner, #robert .inner, #ben .inner,
+  #laura .inner, #holly .inner {
       transform: translateY(2.75vw);
   }
   
-  #hannah .inner {
+  #heather .inner {
       transform: translateY(1.5vw);
   }
   
-  #ashley .inner, #denisse .inner {
+  #gloria .inner, #lisa .inner {
       transform: translateY(-2.5vw);
   }
 }
@@ -152,32 +152,32 @@
         float: left; 
     }
   
-    #ashleyPic {
+    #gloriaPic {
         top: 13px;
         position: relative;
     }
     
-    #denissePic {
+    #lisaPic {
         top: 15px;
         position: relative;
     }
     
-    #hannah .inner {
+    #heather .inner {
         top: -4px;
     }
     
-    #humberto .inner {
+    #ben .inner {
         top: 10px;
     }
     
-    #conor .inner, #michele .inner, #abigail .inner, 
-    #alexandra .inner, #joel .inner {
+    #george .inner, #jessica .inner, #holly .inner, 
+    #laura .inner, #robert .inner {
         top: 5px;
     }
     
-    #conor .inner, #michele .inner, #abigail .inner, 
-    #alexandra .inner, #joel .inner, #humberto .inner,
-    #hannah .inner {
+    #george .inner, #jessica .inner, #holly .inner, 
+    #laura .inner, #robert .inner, #ben .inner,
+    #heather .inner {
         padding-top: 30px;
         padding-bottom: 30px;
     }
