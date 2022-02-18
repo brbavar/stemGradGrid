@@ -81,7 +81,7 @@ function filter() {
         selections[2].style.display = "block";
     }
     else {
-        selections[0].style.display = "none"
+        selections[0].style.display = "none";
         if(proVal === "allProfessions")
             selections[2].style.display = "none";
     }
@@ -92,7 +92,7 @@ function filter() {
         selections[2].style.display = "block";
     }
     else {
-        selections[1].style.display = "none"
+        selections[1].style.display = "none";
         if(majVal === "allMajors")
             selections[2].style.display = "none";
     }
