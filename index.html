@@ -1,115 +1,128 @@
-<!-- For the purposes of this repo, the graduates' names have been replaced with fake names. -->
+<!-- For the purposes of this repo, the graduates' names have been replaced with fake names, and their pictures
+     have been replaced with decorative placeholder images. -->
 
-<div class="filter" id="majorFilter" onclick="clearMajor()"></div>
-<div class="filter" onclick="clearProfession()" style="margin-bottom: 35px;"></div>
-<div class="filter" id="clear" onclick="clearSelections()">Clear&#160;selections</div>
-<div id="whole">
-    <div class="card grad biochem">
-        <div class="inCard" id="inCardJessica">
-            <div class="picDiv">
-                <img alt="Jessica" class="pic" height="243" id="jessicaPic" src="smith-jessica.png" width="225" />
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="randomizeAndFilter.js"></script>
+</head>
+<body>
+    <div id="filterBox">
+        <select id="majorMenu" onchange="filter()">
+            <option value="allMajors">All majors</option>
+            <option value="bio">Biology</option>
+            <option value="phys">Physics</option>
+            <option value="cs">Computer&#160;science</option>
+            <option value="info">Informatics</option>
+            <option value="chem">Chemistry</option>
+            <option value="biochem">Biochemistry</option>
+            <option value="math">Mathematics</option>
+        </select>
+        <select id="professionMenu" onchange="filter()">
+            <option value="allProfessions">All career paths</option>
+            <option value="med">Medical&#160;school</option>
+            <option value="grad">Graduate&#160;school</option>
+            <option value="ed">Education</option>
+            <option value="hlth">Health&#160;and&#160;medicine</option>
+            <option value="ind">Industry</option>
+        </select>
+        <br><br><br>
+        <div class="filter" id="majFilter" onclick="clearMajor()"></div>
+        <div class="filter" id="proFilter" onclick="clearProfession()"></div>
+        <div class="filter" id="clear" onclick="clearSelections()">Clear&#160;selections</div>
+        <br><br>
+    </div>
+    <div style="text-align: center">
+        <div id="whole">
+            <div class="card grad biochem">
+                <div class="picDiv">
+                    <img alt="Jessica" class="pic" height="237" width="220" src="img/smith-jessica.png" />
+                </div>
+                <div class="textDiv">
+                    <div class="inner">
+                        <span class="largeFont"><strong>Jessica Smith</strong><br>B.S. Biochemistry</span><br><br>Arizona State University<br><strong>Ph.D. Candidate</strong>
+                    </div>
+                </div>
             </div>
-            <div class="textDiv" id="jessica">
-                <div class="inner">
-                    <span class="largeFont"><strong>Jessica Smith</strong><br />B.S. Biochemistry</span><br /><br />Arizona State University<br /><strong>Ph.D. Candidate</strong>
+            <div class="card grad chem">
+                <div class="picDiv">
+                    <img alt="George" class="pic" height="237" width="220" src="img/hutchinson-george.png" />
+                </div>
+                <div class="textDiv">
+                    <div class="inner">
+                        <span class="largeFont"><strong>George Hutchinson</strong><br>B.S. Chemistry</span><br><br>Indiana University Bloomington<br><strong>Ph.D. Candidate</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="card med biochem">
+                <div class="picDiv">
+                    <img alt="Laura" class="pic" height="237" width="220" src="img/fuller-laura.png" />
+                </div>
+                <div class="textDiv">
+                    <div class="inner">
+                        <span class="largeFont"><strong>Laura Fuller</strong><br>B.S. Biochemistry</span><br><br>IU School of Medicine<br><strong>Medical Student</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="card ind biochem">
+                <div class="picDiv">
+                    <img alt="Heather" class="pic" height="237" width="220" src="img/watson-heather.png" />
+                </div>
+                <div class="textDiv">
+                    <div class="inner">
+                        <span class="largeFont"><strong>Heather Watson</strong><br>B.S. Biochemistry</span><br><br>Lebermuth Company, Inc.<br><strong>Regulatory Specialist</strong><br>(Fragrance Industry)
+                    </div>
+                </div>
+            </div>
+            <div class="card ind chem">
+                <div class="picDiv">
+                    <img alt="Lisa" class="pic" height="237" width="220" src="img/roberts-lisa.png" />
+                </div>
+                <div class="textDiv">
+                    <div class="inner">
+                        <span class="largeFont"><strong>Lisa Roberts</strong><br>B.S. Chemistry &amp; B.A. French</span><br><br>IU School of Medicine<br>M.S. Biochemistry &amp; Molecular Biology<br><br>Intellia Therapeutics<br><strong>Senior Associate Scientist</strong><br><span class="shiftRight">(Mass spectrometry)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card ind chem">
+                <div class="picDiv">
+                    <img alt="Holly" class="pic" height="237" width="220" src="img/hartz-holly.png" />
+                </div>
+                <div class="textDiv">
+                    <div class="inner">
+                        <span class="largeFont"><strong>Holly Hartz</strong><br>B.S. Chemistry</span><br><br>H.B. Fuller<br><strong>Quality Lab Technician</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="card ind biochem">
+                <div class="picDiv">
+                    <img alt="Gloria" class="pic" height="237" width="220" src="img/young-gloria.png" />
+                </div>
+                <div class="textDiv">
+                    <div class="inner">
+                        <span class="largeFont"><strong>Gloria Young</strong><br>B.S. Biochemistry</span><br><br>Massachussets Institute of Technology<br>Ph.D. Chemistry<br><br>Akoya Biosciences<br><strong>Laboratory Manager</strong><br><span class="shiftRight">(Immunotherapy oncology treatment)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card grad chem">
+                <div class="picDiv">
+                    <img alt="Ben" class="pic" height="237" width="220" src="img/jefferson-ben.png" />
+                </div>
+                <div class="textDiv">
+                    <div class="inner">
+                        <span class="largeFont"><strong>Ben Jefferson</strong><br>B.S. Chemistry</span><br><br>University of Arizona<br><strong>Ph.D. Candidate (Geoscience)</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="card med biochem">
+                <div class="picDiv">
+                    <img alt="Robert" class="pic" height="237" width="220" src="img/singer-robert.png" />
+                </div>
+                <div class="textDiv">
+                    <div class="inner">
+                        <span class="largeFont"><strong>Robert Singer</strong><br>B.S. Biochemistry</span><br><br>Indiana School of Medicine<br><strong>Medical Student</strong>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="card grad chem">
-        <div class="inCard" id="inCardGeorge">
-            <div class="picDiv">
-                <img alt="George" class="pic" height="417.75" id="georgePic" src="hutchinson-george.png" width="225" />
-            </div>
-            <div class="textDiv" id="george">
-                <div class="inner">
-                    <span class="largeFont"><strong>George Hutchinson</strong><br />B.S. Chemistry</span><br /><br />Indiana University Bloomington<br /><strong>Ph.D. Candidate</strong>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="card med biochem">
-        <div class="inCard" id="inCardLaura">
-            <div class="picDiv">
-                <img alt="Laura" class="pic" height="252.75" id="lauraPic" src="fuller-laura.png" width="225" />
-            </div>
-            <div class="textDiv" id="laura">
-                <div class="inner">
-                    <span class="largeFont"><strong>Laura Fuller</strong><br />B.S. Biochemistry</span><br /><br />IU School of Medicine<br /><strong>Medical Student</strong>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="card ind biochem">
-        <div class="inCard" id="inCardHeather">
-            <div class="picDiv">
-                <img alt="Heather" class="pic" height="252.75" id="heatherPic" src="watson-heather.png" width="225" />
-            </div>
-            <div class="textDiv" id="heather">
-                <div class="inner">
-                    <span class="largeFont"><strong>Heather Watson</strong><br />B.S. Biochemistry</span><br /><br />Lebermuth Company, Inc.<br /><strong>Regulatory Specialist</strong><br />(Fragrance Industry)
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="card ind chem">
-        <div class="inCard" id="inCardLisa">
-            <div class="picDiv">
-                <img alt="Lisa" class="pic" height="267.75" id="lisaPic" src="roberts-lisa.png" width="225" />
-            </div>
-            <div class="textDiv" id="lisa">
-                <div class="inner">
-                    <span class="largeFont"><strong>Lisa Roberts</strong><br />B.S. Chemistry &amp; B.A. French</span><br /><br />IU School of Medicine<br />M.S. Biochemistry &amp; Molecular Biology<br /><br />Intellia Therapeutics<br /><strong>Senior Associate Scientist</strong><br /><span class="shiftRight">(Mass spectrometry)</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="card ind chem">
-        <div class="inCard" id="inCardHolly">
-            <div class="picDiv">
-                <img alt="Holly" class="pic" height="257.25" id="hollyPic" src="hartz-holly.png" width="225" />
-            </div>
-            <div class="textDiv" id="holly">
-                <div class="inner">
-                    <span class="largeFont"><strong>Holly Hartz</strong><br />B.S. Chemistry</span><br /><br />H.B. Fuller<br /><strong>Quality Lab Technician</strong>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="card ind biochem">
-        <div class="inCard" id="inCardGloria">
-            <div class="picDiv">
-                <img alt="Gloria" class="pic" height="298.5" id="gloriaPic" src="young-gloria.png" width="225" />
-            </div>
-            <div class="textDiv" id="gloria">
-                <div class="inner">
-                    <span class="largeFont"><strong>Gloria Young</strong><br />B.S. Biochemistry</span><br /><br />Massachussets Institute of Technology<br />Ph.D. Chemistry<br /><br />Akoya Biosciences<br /><strong>Laboratory Manager</strong><br /><span class="shiftRight">(Immunotherapy oncology treatment)</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="card grad chem">
-        <div class="inCard" id="inCardBen">
-            <div class="picDiv">
-                <img alt="Ben" class="pic" height="263.25" id="benPic" src="jefferson-ben.png" width="225" />
-            </div>
-            <div class="textDiv" id="ben">
-                <div class="inner">
-                    <span class="largeFont"><strong>Ben Jefferson</strong><br />B.S. Chemistry</span><br /><br />University of Arizona<br /><strong>Ph.D. Candidate (Geoscience)</strong>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="card med biochem" id="cardRobert">
-        <div class="inCard" id="inCardRobert">
-            <div class="picDiv">
-                <img alt="Robert" class="pic" height="273.75" id="robertPic" src="singer-robert.png" width="225" />
-            </div>
-            <div class="textDiv" id="robert">
-                <div class="inner">
-                    <span class="largeFont"><strong>Robert Singer</strong><br />B.S. Biochemistry</span><br /><br />Indiana School of Medicine<br /><strong>Medical Student</strong>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+</body>

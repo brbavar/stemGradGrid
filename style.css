@@ -1,34 +1,65 @@
-/* For the purposes of this repo, the graduates' names have been replaced with fake names. */
+body {
+    background-color: #990000;
+    font-size: 12pt;
+}
+
+body, body * {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#filterBox {
+    text-align: center;
+}
+
+select {
+    background-color: #EDEBEB;
+    height: 50px;
+    width: auto;
+    text-align: center;
+    border: 0px solid white;
+    border-radius: 5px;
+    font-size: 16pt;
+}
 
 .filter {
     color: black;
-    background-color: #fff;
-    font-size: 12pt;
+    background-color: #EDEBEB;
+    border-radius: 5px;
     text-align: center;
     display: none;
     padding: 10px;
     width: 200px;
 }
 
-#majorFilter {
-    position: relative;
-    top: -20px;
+#majorMenu {
+    margin-right: 25px;
 }
 
-.filter:hover {
-    border: 2px solid #006298;
+#majFilter, #proFilter {
+    margin-bottom: 25px; 
+    margin-right: 25px;
+}
+
+select, #clear, .filter, .filter::after {
+    transition: all .25s ease-in-out;
+}
+
+select:hover, #clear:hover {
+    filter: invert(1);
+}
+
+.filter:not(#clear):hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 10px 30px black;
+}
+
+option {
+    color: black;
 }
 
 .filter::after {
     content: "✕";
-}
-
-.filter:hover::after {
-    color: #006298;
-}
-
-#clear:hover {
-    background-color: #006298;
+    color: #990000;
 }
 
 #clear::after {
@@ -36,12 +67,13 @@
 }
 
 .textDiv {
+    color: white;
     transform: translateX(50px);
+    text-align: left;
 }
 
 .picDiv {
     width: auto;
-    position: relative;
 }
 
 .pic {
@@ -50,17 +82,23 @@
     margin-right: auto;
 }
 
+.card {
+    display: flex;
+    align-items: center;
+}
+
 #whole {
+    display: inline-block;
+    width: 94vw;
+    height: auto;
+    padding-top: 80px;
     border-radius: 50px;
     background-color: black;
     white-space: nowrap;
-    position: relative;
 }
 
-@media only screen and (max-width: 679px) {
+@media only screen and (max-width: 680px) {
   #whole {
-    width: 94vw;
-    height: auto;
     display: ;
   }
   
@@ -69,13 +107,7 @@
   }
   
   .card {
-      padding-top: 20vw;
-      padding-bottom: 20vw;
-      transform: translateY(-11vw);
-  }
-  
-  .inCard {
-      width: 85%;
+      padding-bottom: 15vw;
   }
   
   .pic {
@@ -91,7 +123,6 @@
   .textDiv {
       float: right;
       width: 40vw;
-      padding-right: 6vw;
   }
   
   .inner {
@@ -101,89 +132,19 @@
   .largeFont {
       font-size: 2.8vw;
   }
-
-  #jessica .inner, #george .inner, #robert .inner, #ben .inner,
-  #laura .inner, #holly .inner {
-      transform: translateY(2.75vw);
-  }
-  
-  #heather .inner {
-      transform: translateY(1.5vw);
-  }
-  
-  #gloria .inner, #lisa .inner {
-      transform: translateY(-2.5vw);
-  }
-}
-
-@media only screen (min-width: 679px) and (max-width: 680px) {
-    #whole {
-        display: none;
-    }
-    
-    #whole div {
-        display: none;
-    }
-    
-    #whole::after {
-        content: 'Increase or decrease size of browser window to continue viewing alumni.';  
-    }
 }
 
 @media only screen and (min-width: 680px) {
-    #whole {
-        padding: 15px;
-        display: ;
-    }
-    
-    #whole div {
-        display: ;
+    .pic {
+        float: left;
     }
 
     .card {
-        padding: 50px;
+        padding-bottom: 103px;
+        padding-left: 50px;
+        padding-right: 50px;
     }
-    
-    .inCard {
-        width: 50%;
-        margin-left: 20px;
-        margin-right: auto; 
-    }
-    
-    .pic {
-        float: left; 
-    }
-  
-    #gloriaPic {
-        top: 13px;
-        position: relative;
-    }
-    
-    #lisaPic {
-        top: 15px;
-        position: relative;
-    }
-    
-    #heather .inner {
-        top: -4px;
-    }
-    
-    #ben .inner {
-        top: 10px;
-    }
-    
-    #george .inner, #jessica .inner, #holly .inner, 
-    #laura .inner, #robert .inner {
-        top: 5px;
-    }
-    
-    #george .inner, #jessica .inner, #holly .inner, 
-    #laura .inner, #robert .inner, #ben .inner,
-    #heather .inner {
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-    
+
     .largeFont {
         font-size: 16pt;
     }
@@ -193,8 +154,4 @@
   #whole {
     width: 975px;
   }
-}
-
-.card {
-    font-size: 12pt;
 }
