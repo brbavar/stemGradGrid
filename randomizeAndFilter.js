@@ -2,8 +2,12 @@ var cards = document.getElementsByClassName("card");
 var i, j;
 var selections = document.getElementsByClassName("filter");
 
-// Randomize the order of the cards, each of which contains one picture and the corresponding text.
+/* Reset page. This includes both selecting the "All majors" and "All career paths" options by default and randomizing the 
+   order of the cards - each of which contains one picture and the corresponding text. */
 document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('majorMenu').children[0].selected = 'true';
+    document.getElementById('professionMenu').children[0].selected = 'true';
+
     var randIndex, generatedBefore = 0;
     var cards = document.querySelectorAll(".card");
     var shuffledCardIndices = new Array();
